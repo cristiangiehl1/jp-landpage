@@ -1,9 +1,40 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import {
+  Lato,
+  Manrope,
+  Montserrat,
+  Nova_Mono,
+  Nunito_Sans,
+  Poppins,
+} from 'next/font/google'
 
-const inter = Montserrat({ subsets: ['latin'] })
+const mont = Montserrat({ subsets: ['latin'] })
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+})
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['500'],
+})
+const nunito = Nunito_Sans({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  weight: ['500'],
+})
+const nova = Nova_Mono({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  weight: ['400'],
+})
+const lato = Lato({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  weight: ['400'],
+})
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={`${lato.className} ${manrope.variable}`}>
       <body className="text-white">{children}</body>
     </html>
   )

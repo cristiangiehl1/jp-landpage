@@ -5,7 +5,7 @@ import { PiMaskSad } from 'react-icons/pi'
 export function HomeIcons() {
   return (
     <div className="flex flex-col gap-4">
-      <span className="text-custom-orange-500 font-bold">
+      <span className="font-bold text-custom-skin-500">
         Eu te ajudo a lidar com
       </span>
       <div className="flex gap-10">

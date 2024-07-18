@@ -2,6 +2,7 @@
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Link from 'next/link'
 import { useLayoutEffect, useRef } from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -14,8 +15,16 @@ export function HomeContent() {
   const box5 = useRef(null)
   const box6 = useRef(null)
 
+  const text1 = useRef(null)
+  const text2 = useRef(null)
+  const text3 = useRef(null)
+  const text4 = useRef(null)
+  const text5 = useRef(null)
+  const text6 = useRef(null)
+
   useLayoutEffect(() => {
     const boxes = [box1, box2, box3, box4, box5, box6]
+    const texts = [text1, text2, text3, text4, text5, text6]
 
     boxes.forEach((box) => {
       const tl = gsap.timeline({
@@ -34,22 +43,49 @@ export function HomeContent() {
         ease: 'power2.inOut',
       })
     })
+
+    texts.forEach((text) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: text.current,
+          start: 'top bottom',
+          end: 'top 300px',
+          scrub: 1,
+        },
+      })
+
+      tl.to(text.current, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.inOut',
+      })
+    })
   }, [])
 
   return (
-    <section className="mb-10 grid grid-rows-6 gap-8">
-      <div ref={box1} className="-translate-x-full opacity-0 lg:h-[400px]">
-        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
+    <main className="grid grid-rows-6">
+      <section className="bg-parallax1 bg-cover bg-fixed px-16 py-6 lg:h-[400px]">
+        <h2
+          ref={text1}
+          className="mb-4 -translate-x-full text-3xl font-bold leading-tight tracking-tighter text-custom-orange-500 opacity-0 md:text-5xl"
+        >
           Psicoterapia
         </h2>
-        <p className="">
+        <p
+          className="bg-custom-form translate-x-full p-2 text-custom-blue-900 opacity-0 md:text-xl"
+          ref={text2}
+        >
           Fico feliz em saber que você tem interesse em iniciar esse processo de
           “olhar para si” comigo, será um prazer iniciar nossas sessões.
         </p>
-      </div>
+      </section>
 
-      <div ref={box2} className="translate-x-full opacity-0 lg:h-[400px]">
-        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
+      <section
+        ref={box2}
+        className="translate-x-full bg-custom-menu px-16 py-6 opacity-0 lg:h-[400px]"
+      >
+        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-custom-skin-500 md:text-2xl">
           Supervisão clínica individual
         </h2>
         <p className="">
@@ -58,10 +94,13 @@ export function HomeContent() {
           pilares essências para qualquer analista segundo o tripé analítico
           proposto por Freud.
         </p>
-      </div>
+      </section>
 
-      <div ref={box3} className="-translate-x-full opacity-0 lg:h-[400px]">
-        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
+      <section className="bg-parallax2 bg-cover bg-fixed px-16 py-6 lg:h-[400px]">
+        <h2
+          ref={box3}
+          className="mb-4 -translate-x-full text-xl font-bold leading-tight tracking-tighter text-custom-skin-500 opacity-0 md:text-2xl"
+        >
           Consulta sob sigilo
         </h2>
         <p className="">
@@ -71,10 +110,13 @@ export function HomeContent() {
           2018. Essa modalidade de tratamento é uma realidade cada vez mais
           presente no nosso dia a dia.
         </p>
-      </div>
+      </section>
 
-      <div ref={box4} className="translate-x-full opacity-0 lg:h-[400px]">
-        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
+      <section
+        ref={box4}
+        className="translate-x-full bg-custom-menu px-16 py-6 opacity-0 lg:h-[400px]"
+      >
+        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-custom-skin-500 md:text-2xl">
           Faça uma consulta online
         </h2>
         <p className="">
@@ -87,10 +129,34 @@ export function HomeContent() {
           psicoterapia individual, com encontros semanais previamente agendados,
           cada sessão dura de 45 a 50 minutos
         </p>
-      </div>
+      </section>
 
-      <div ref={box5} className="-translate-x-full opacity-0 lg:h-[400px]">
-        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
+      <section className="bg-parallax4 flex flex-col items-start justify-between bg-custom-menu bg-cover bg-fixed px-16 py-6 lg:h-[400px]">
+        <div className="flex flex-col">
+          <h2
+            ref={box5}
+            className="mb-4 -translate-x-full text-xl font-bold leading-tight tracking-tighter text-custom-blue-900 opacity-0 md:text-2xl"
+          >
+            Agende sua consulta!
+          </h2>
+          <p className="mb-4 bg-custom-menu bg-opacity-70 p-2 font-semibold text-custom-blue-900">
+            O primeiro contato, uma entrevista inicial para esclarecer dúvidas e
+            saber mais detalhes sobre a consulta online, é gratuito.
+          </p>
+        </div>
+        <Link
+          href={'/schedule'}
+          className="whitespace-nowrap rounded-full bg-custom-blue-900 p-3 hover:animate-pulse"
+        >
+          Agende aqui
+        </Link>
+      </section>
+
+      <section
+        ref={box6}
+        className="-translate-x-full bg-custom-menu px-16 py-6 opacity-0 lg:h-[400px]"
+      >
+        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-custom-skin-500 md:text-2xl">
           Conheça minha formação
         </h2>
         <p className="text-left leading-relaxed">
@@ -106,17 +172,7 @@ export function HomeContent() {
           novas possibilidades. Como diz Magno: “A Psicanálise portanto é um
           exercício de liberdade
         </p>
-      </div>
-
-      <div ref={box6} className="translate-x-full opacity-0 lg:h-[400px]">
-        <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
-          Agende sua consulta!
-        </h2>
-        <p className="">
-          O primeiro contato, uma entrevista inicial para esclarecer dúvidas e
-          saber mais detalhes sobre a consulta online, é gratuito.
-        </p>
-      </div>
-    </section>
+      </section>
+    </main>
   )
 }

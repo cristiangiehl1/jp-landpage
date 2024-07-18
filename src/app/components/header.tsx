@@ -3,6 +3,7 @@
 import gsap from 'gsap'
 import { X } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLayoutEffect, useRef } from 'react'
 import { FaInstagram, FaTwitter } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa6'
@@ -15,11 +16,17 @@ export default function Header() {
 
   useLayoutEffect(() => {
     if (menuContainer.current) {
-      tl.current = gsap.timeline({ paused: true }).to(menuContainer.current, {
-        opacity: 1,
-        duration: 1,
-        top: 0,
-      })
+      tl.current = gsap
+        .timeline({ paused: true })
+        .to(menuContainer.current, {
+          zIndex: 5,
+          duration: 0.1,
+        })
+        .to(menuContainer.current, {
+          opacity: 1,
+          duration: 1,
+          top: 0,
+        })
     }
   }, [])
 
@@ -40,12 +47,14 @@ export default function Header() {
             alt=""
             className="h-8 w-8 rounded-full bg-white p-0.5"
           />
-          <span className="font-bold text-white">João Pedro Giehl</span>
+          <span className="font-manrope font-bold text-white">
+            João Pedro Giehl
+          </span>
         </div>
 
         <button
           id="openMenuBtn"
-          className="after:bg-custom-orange-500 relative flex gap-1 pb-2 pt-0.5 font-bold text-white transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"
+          className="relative flex gap-1 pb-2 pt-0.5 font-bold uppercase text-white transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-custom-skin-500 after:transition-transform after:duration-300 hover:after:scale-x-100"
           onClick={() => openMenu()}
         >
           Menu
@@ -54,71 +63,77 @@ export default function Header() {
 
       <div
         ref={menuContainer}
-        className="bg-custom-blue-900 fixed top-[-100%] flex h-screen w-screen place-content-center items-center justify-between gap-4 px-10 opacity-0"
+        className="fixed top-[-100%] -z-10 flex h-screen w-screen place-content-center items-center justify-between gap-4 bg-custom-blue-900 px-[8vw] opacity-0"
       >
         <button
           onClick={() => closeMenu()}
           className="absolute right-4 top-4 -z-10"
         >
-          <X className="hover:text-custom-gray-500 transition-colors duration-300" />
+          <X className="transition-colors duration-300 hover:text-custom-gray-500" />
         </button>
-        <div className="text-custom-menu absolute -z-10 text-[30vw]">Menu</div>
+
+        <div className="absolute -z-10 text-[30vw] text-custom-menu">Menu</div>
 
         <ul className="flex list-none flex-col gap-6">
           <li>
-            <a
-              href="#"
-              className="hover:text-custom-gray-500 text-2xl font-bold transition-colors duration-300 md:text-3xl"
+            <Link
+              onClick={() => closeMenu()}
+              href="/"
+              className="text-2xl font-bold transition-colors duration-300 hover:text-custom-gray-500 md:text-4xl"
             >
-              Home <span className="text-md:sm text-xs">01</span>
-            </a>
+              Home <span className="text-xs md:text-sm">01</span>
+            </Link>
           </li>
 
           <li>
             <a
+              onClick={() => closeMenu()}
               href="#"
-              className="hover:text-custom-gray-500 text-2xl font-bold transition-colors duration-300 md:text-3xl"
+              className="text-2xl font-bold transition-colors duration-300 hover:text-custom-gray-500 md:text-4xl"
             >
               Processo Terapêutico{' '}
-              <span className="text-md:sm text-xs">02</span>
+              <span className="text-xs md:text-sm">02</span>
             </a>
           </li>
 
           <li>
-            <a
-              href="#"
-              className="hover:text-custom-gray-500 text-2xl font-bold transition-colors duration-300 md:text-3xl"
+            <Link
+              onClick={() => closeMenu()}
+              href="/schedule"
+              className="text-2xl font-bold transition-colors duration-300 hover:text-custom-gray-500 md:text-4xl"
             >
-              Sobre mim <span className="text-md:sm text-xs">03</span>
-            </a>
+              Agende um horário <span className="text-xs md:text-sm">03</span>
+            </Link>
           </li>
         </ul>
 
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-1">
-            <h3 className="text-custom-orange-500 text-sm font-semibold md:text-xl">
+            <h3 className="text-sm font-semibold text-custom-skin-500 md:text-xl">
               Atendimento Online
             </h3>
-            <p className="text-xs">No conforto da sua casa</p>
-            <p className="text-xs">No horário mais confortável para você</p>
+            <p className="text-xs md:text-sm">No conforto da sua casa</p>
+            <p className="text-xs md:text-sm">
+              No horário mais confortável para você
+            </p>
           </div>
 
           <div className="flex flex-col gap-1">
-            <h3 className="text-custom-orange-500 text-sm font-semibold md:text-xl">
+            <h3 className="text-sm font-semibold text-custom-skin-500 md:text-xl">
               Contatos
             </h3>
             <a
               href="mailto:cristiangiehl@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="text-xs"
+              className="text-xs transition-colors duration-300 hover:text-custom-gray-400 md:text-sm"
             >
               jpgiehl@gmail.com
             </a>
           </div>
 
           <div className="flex flex-col gap-2">
-            <h3 className="text-custom-orange-500 text-sm font-semibold md:text-xl">
+            <h3 className="text-sm font-semibold text-custom-skin-500 md:text-xl">
               Me siga nas redes sociais
             </h3>
             <div className="flex gap-4">

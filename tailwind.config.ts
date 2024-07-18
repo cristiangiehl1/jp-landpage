@@ -17,6 +17,14 @@ const config = {
         '2xl': '1400px',
       },
     },
+    backgroundImage: {
+      parallax1: 'url("../assets/atendimento.jpg")',
+      parallax2: 'url("../assets/atendimento.jpg")',
+      parallax3: 'url("../assets/atendimento.jpg")',
+      parallax4: 'url("../assets/agende_consulta.jpg")',
+      schedule: 'url("../assets/agende_consulta.jpg")',
+    },
+
     extend: {
       colors: {
         border: 'hsl(var(--border))',
@@ -61,6 +69,10 @@ const config = {
         'custom-brown-300': '#a99789',
         'custom-orange-500': '#f0611f',
         'custom-menu': 'rgba(255, 255, 255, 0.1)',
+        'custom-form': 'rgba(255, 255, 255, 0.6)',
+      },
+      fontFamily: {
+        manrope: 'var(--font-manrope)',
       },
 
       borderRadius: {

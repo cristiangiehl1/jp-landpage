@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="mt-5 flex flex-col items-center justify-center gap-2 bg-slate-400 p-2 shadow-sm">
+    <footer className="relative flex flex-col items-center justify-center gap-2 bg-custom-blue-900 p-4 shadow-sm">
       <p className="text-xs font-bold text-white">
         Psicólogo João Pedro Giehl.{' '}
       </p>
