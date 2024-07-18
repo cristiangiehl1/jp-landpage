@@ -22,9 +22,8 @@ export function HomeContent() {
         scrollTrigger: {
           trigger: box.current,
           start: 'top bottom',
-          end: 'top bottom',
+          end: 'top 300px',
           scrub: 1,
-          markers: true,
         },
       })
 
@@ -39,10 +38,7 @@ export function HomeContent() {
 
   return (
     <section className="mb-10 grid grid-rows-6 gap-8">
-      <div
-        ref={box1}
-        className="-translate-x-full bg-white opacity-0 lg:h-[400px]"
-      >
+      <div ref={box1} className="-translate-x-full opacity-0 lg:h-[400px]">
         <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
           Psicoterapia
         </h2>
@@ -52,10 +48,7 @@ export function HomeContent() {
         </p>
       </div>
 
-      <div
-        ref={box2}
-        className="translate-x-full bg-white opacity-0 lg:h-[400px]"
-      >
+      <div ref={box2} className="translate-x-full opacity-0 lg:h-[400px]">
         <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
           Supervisão clínica individual
         </h2>
@@ -67,10 +60,7 @@ export function HomeContent() {
         </p>
       </div>
 
-      <div
-        ref={box3}
-        className="-translate-x-full bg-white opacity-0 lg:h-[400px]"
-      >
+      <div ref={box3} className="-translate-x-full opacity-0 lg:h-[400px]">
         <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
           Consulta sob sigilo
         </h2>
@@ -83,10 +73,7 @@ export function HomeContent() {
         </p>
       </div>
 
-      <div
-        ref={box4}
-        className="translate-x-full bg-white opacity-0 lg:h-[400px]"
-      >
+      <div ref={box4} className="translate-x-full opacity-0 lg:h-[400px]">
         <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
           Faça uma consulta online
         </h2>
@@ -102,10 +89,7 @@ export function HomeContent() {
         </p>
       </div>
 
-      <div
-        ref={box5}
-        className="-translate-x-full bg-white opacity-0 lg:h-[400px]"
-      >
+      <div ref={box5} className="-translate-x-full opacity-0 lg:h-[400px]">
         <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
           Conheça minha formação
         </h2>
@@ -124,10 +108,7 @@ export function HomeContent() {
         </p>
       </div>
 
-      <div
-        ref={box6}
-        className="translate-x-full bg-white opacity-0 lg:h-[400px]"
-      >
+      <div ref={box6} className="translate-x-full opacity-0 lg:h-[400px]">
         <h2 className="mb-4 text-xl font-bold leading-tight tracking-tighter text-orange-500 md:text-2xl">
           Agende sua consulta!
         </h2>

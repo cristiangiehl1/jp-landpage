@@ -28,7 +28,7 @@ export default function Test() {
         // First value related to the trigger element.
         // Second value related to the scroller (viewport)
         start: 'top center',
-        end: 'top bottom',
+        end: 'top 200px',
         scrub: 2,
         markers: true,
       },

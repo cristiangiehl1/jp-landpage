@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 
+import { Footer } from '../components/footer'
 import Header from '../components/header'
 import Whatsapp from '../components/whatssapp'
 
@@ -9,6 +10,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       <Header />
       {children}
       <Whatsapp />
+      <Footer />
     </div>
   )
 }
