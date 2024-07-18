@@ -1,24 +1,26 @@
-import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
-import "./globals.css";
+import './globals.css'
 
-const inter = Open_Sans({ subsets: ["latin"] });
+import type { Metadata } from 'next'
+import { Montserrat } from 'next/font/google'
+
+const inter = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Dr. João Pedro',
-    default: 'Dr. João Pedro',
+    template: '%s | Psicólogo João Pedro',
+    default: 'Psicólogo João Pedro',
   },
+  icons: 'http://localhost:3000/logo.png',
 }
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={inter.className}>
+      <body className="text-white">{children}</body>
     </html>
-  );
+  )
 }
