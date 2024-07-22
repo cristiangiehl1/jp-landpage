@@ -39,7 +39,7 @@ export default function Header() {
   }
 
   return (
-    <header className="mb-6 flex flex-col items-center justify-between py-4">
+    <header className="flex flex-col items-center justify-between bg-custom-menu py-6">
       <div className="flex w-[98vw] items-center justify-between gap-2 px-10 md:px-20">
         <div className="flex items-center justify-center gap-2">
           <Image

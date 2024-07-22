@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 
-import jpPhoto from '@/assets/jp-photo-1.jpeg'
+import jpPhoto from '@/assets/jp-photo-2.png'
 
 import { HomeContent } from './home-content'
 import { HomeIcons } from './home-icons'
@@ -12,39 +12,41 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-4 overflow-x-hidden">
-      <div className="mb-48 flex flex-col gap-6 px-10 md:flex-row md:justify-between md:px-20">
-        <div className="w-[100%] md:w-[50vw]">
-          <div className="mb-4 border-y-2 border-white py-4">
-            <h1 className="font-bold tracking-widest text-custom-skin-500 md:text-2xl">
-              Dr. João Pedro
+    <div className="flex flex-col overflow-x-hidden">
+      <div className="my-4 grid grid-cols-2 place-content-end bg-slate-200 px-2 pt-6 shadow-2xl sm:px-10">
+        <div className="flex items-end">
+          <Image
+            src={jpPhoto}
+            height={500}
+            width={500}
+            alt="Dr. João Pedro com blusa social branca."
+            quality={80}
+            className=""
+          />
+        </div>
+
+        <div className="">
+          <div className="mb-4 py-4">
+            <h1 className="text-2xl font-bold tracking-widest text-custom-blue-900 sm:text-4xl lg:text-5xl">
+              João Pedro Giehl
             </h1>
 
-            <p className="text-xs font-semibold text-white lg:text-sm">
+            <p className="text-xs font-semibold text-custom-blue-900 lg:text-lg">
               Psicólogo Clínico (CRP: 05/72305)
             </p>
           </div>
 
-          <div className="mb-4">
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-custom-skin-500 md:text-2xl">
+          <div className="mb-10">
+            <h2 className="mb-2 text-base font-semibold leading-none tracking-tighter text-custom-orange-500 md:text-4xl">
               Transformando vidas e promovendo bem estar através da psicoterapia
             </h2>
-            <p className="font-semibold">
+            <p className="text-xs text-custom-blue-900 md:text-xl">
               Para você que está em busca de formas melhores de viver, alívio
               para seus sofrimentos, crescimento pessoal e autoconhecimento.
             </p>
           </div>
 
           <HomeIcons />
-        </div>
-
-        <div className="flex place-content-center">
-          <Image
-            src={jpPhoto}
-            width={400}
-            alt="Dr. João Pedro com blusa social branca."
-            quality={80}
-          />
         </div>
       </div>
 

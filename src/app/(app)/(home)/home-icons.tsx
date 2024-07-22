@@ -4,30 +4,36 @@ import { PiMaskSad } from 'react-icons/pi'
 
 export function HomeIcons() {
   return (
-    <div className="flex flex-col gap-4">
-      <span className="font-bold text-custom-skin-500">
+    <div className="flex flex-col gap-4 pb-6">
+      <span className="text-sm font-bold text-custom-blue-900 md:text-2xl">
         Eu te ajudo a lidar com
       </span>
-      <div className="flex gap-10">
+      <div className="flex gap-5 md:gap-10">
         <div className="flex flex-col items-center gap-1">
           <PiMaskSad
             size={40}
-            className="rounded-sm bg-slate-300 p-1 text-slate-500"
+            className="rounded-sm bg-slate-300 p-1 text-custom-blue-900"
           />
-          <span className="text-xs text-white">Ansiedade</span>
+          <span className="text-xs text-custom-blue-900 md:text-base">
+            Ansiedade
+          </span>
         </div>
 
         <div className="flex flex-col items-center gap-1">
           <FaRegSadCry
             size={40}
-            className="rounded-sm bg-slate-300 p-1 text-slate-500"
+            className="rounded-sm bg-slate-300 p-1 text-custom-blue-900"
           />
-          <span className="text-xs text-white">Depressão</span>
+          <span className="text-xs text-custom-blue-900 md:text-base">
+            Depressão
+          </span>
         </div>
 
-        <div className="flex flex-col items-center gap-1 text-slate-500">
+        <div className="flex flex-col items-center gap-1 text-custom-blue-900">
           <GiEnrage size={40} className="rounded-sm bg-slate-300 p-1" />
-          <span className="text-xs text-white">Irritabilidade</span>
+          <span className="text-xs text-custom-blue-900 md:text-base">
+            Irritabilidade
+          </span>
         </div>
       </div>
     </div>
