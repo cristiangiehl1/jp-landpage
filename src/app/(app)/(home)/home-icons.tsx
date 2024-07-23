@@ -8,7 +8,7 @@ export function HomeIcons() {
       <span className="text-sm font-bold text-custom-blue-900 md:text-xl">
         Eu te ajudo a lidar com
       </span>
-      <div className="flex gap-5 md:gap-10">
+      <div className="flex gap-5 lg:gap-10">
         <div className="flex flex-col items-center gap-1">
           <PiMaskSad
             size={40}

@@ -71,6 +71,7 @@ const config = {
         'custom-orange-500': '#f0611f',
         'custom-menu': 'rgba(255, 255, 255, 0.1)',
         'custom-form': 'rgba(255, 255, 255, 0.6)',
+        'custom-content-bg': 'rgba(255, 255, 255, 0.8)',
       },
       fontFamily: {
         manrope: 'var(--font-manrope)',

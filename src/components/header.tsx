@@ -9,7 +9,7 @@ import { FaInstagram } from 'react-icons/fa'
 
 import logo from '@/assets/logo.png'
 
-export default function Header() {
+export function Header() {
   const menuContainer = useRef<HTMLDivElement | null>(null)
   const tl = useRef<gsap.core.Timeline | null>(null)
 
@@ -38,7 +38,7 @@ export default function Header() {
   }
 
   return (
-    <header className="flex flex-col items-center justify-between bg-custom-menu py-6">
+    <header className="flex flex-col items-center justify-between bg-custom-blue-900 py-6">
       <div className="flex w-[98vw] items-center justify-between gap-2 px-10 md:px-20">
         <div className="flex items-center justify-center gap-2">
           <Image

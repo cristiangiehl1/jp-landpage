@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { useLayoutEffect, useRef } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
 
-export default function Whatsapp() {
+export function Whatsapp() {
   const whatsContainer = useRef<HTMLDivElement | null>(null)
   const whatsText = useRef<HTMLSpanElement | null>(null)
   const tl = useRef<gsap.core.Timeline | null>(null)
