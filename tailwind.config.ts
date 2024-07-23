@@ -19,8 +19,9 @@ const config = {
     },
     backgroundImage: {
       parallax1: 'url("../assets/atendimento.jpg")',
-      parallax2: 'url("../assets/atendimento.jpg")',
-      parallax3: 'url("../assets/atendimento.jpg")',
+      parallax2: 'url("../assets/jp-content-1.png")',
+      parallax22: 'url("../assets/jp-content-11.png")',
+      parallax3: 'url("../assets/consulta-online.png")',
       parallax4: 'url("../assets/agende_consulta.jpg")',
       schedule: 'url("../assets/agende_consulta.jpg")',
     },
@@ -117,7 +118,10 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 } satisfies Config
 
 export default config

@@ -134,7 +134,7 @@ export default function Header() {
 
           <div className="flex flex-col gap-2">
             <h3 className="text-sm font-semibold text-custom-skin-500 md:text-xl">
-              Me siga nas redes sociais
+              Me siga no instagram
             </h3>
             <div className="flex gap-4">
               <a
@@ -144,17 +144,6 @@ export default function Header() {
                 rel="noreferrer"
               >
                 <FaInstagram size={25} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jo%C3%A3o-pedro-giehl/"
-                target="_blank"
-                className="hover:animate-colorChange"
-                rel="noreferrer"
-              >
-                <FaLinkedin size={25} />
-              </a>
-              <a href="" target="_blank" className="hover:animate-colorChange">
-                <FaTwitter size={25} />
               </a>
             </div>
           </div>
