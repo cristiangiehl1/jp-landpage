@@ -65,14 +65,14 @@ export function HomeContent() {
 
   return (
     <main className="grid grid-rows-[repeat(6_min-content)]">
-      <section className="bg-parallax1 min-h-[500px] bg-cover bg-fixed px-4 py-6 md:px-16 lg:min-h-screen">
+      <section className="min-h-[500px] bg-parallax1 bg-cover bg-fixed px-4 py-6 md:px-16 lg:min-h-screen">
         <h2
           ref={text1}
           className="mb-4 -translate-x-full text-3xl font-bold leading-tight tracking-tighter text-custom-orange-500 opacity-0 drop-shadow-2xl md:text-4xl"
         >
           Psicoterapia
         </h2>
-        <div className="bg-custom-form overflow-hidden rounded-lg">
+        <div className="overflow-hidden rounded-lg bg-custom-form">
           <p
             className="translate-x-full px-2 py-6 font-semibold text-custom-blue-900 opacity-0 md:text-xl"
             ref={text2}
@@ -83,13 +83,13 @@ export function HomeContent() {
         </div>
       </section>
 
-      <section className="bg-parallax2 lg:bg-parallax22 flex min-h-[500px] gap-6 bg-slate-200 bg-cover bg-top bg-no-repeat px-4 py-6 md:px-16 lg:min-h-screen">
+      <section className="flex min-h-[500px] gap-6 bg-slate-200 bg-parallax2 bg-cover bg-top bg-no-repeat px-4 py-6 md:px-16 lg:min-h-screen lg:bg-parallax22">
         <div className="flex flex-col gap-6">
           <div ref={box2} className="-translate-x-full opacity-0">
             <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 md:text-4xl">
               Sobre mim
             </h2>
-            <div className="bg-custom-form flex flex-col gap-4 rounded-lg p-6">
+            <div className="flex flex-col gap-4 rounded-lg bg-custom-form p-6">
               <p className="text-left leading-relaxed text-custom-blue-900">
                 Formado pela IBMR e psicanalista clínico em constante formação
                 no Colégio Freudiano do Rio de Janeiro. Sempre fui apaixonado
@@ -113,7 +113,7 @@ export function HomeContent() {
             <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 md:text-4xl">
               Minha formação
             </h2>
-            <ul className="bg-custom-form list-inside list-disc rounded-lg p-6">
+            <ul className="list-inside list-disc rounded-lg bg-custom-form p-6">
               <li className="text-left leading-relaxed text-custom-blue-900">
                 Formação em Psicanálise – Colégio Freudiano do Rio de Janeiro.
               </li>
@@ -144,12 +144,12 @@ export function HomeContent() {
         </p>
       </section>
 
-      <section className="bg-parallax3 flex min-h-[500px] gap-4 bg-slate-200 bg-cover px-4 py-6 md:px-16 lg:min-h-screen">
+      <section className="flex min-h-[500px] gap-4 bg-slate-200 bg-parallax3 bg-cover px-4 py-6 md:px-16 lg:min-h-screen">
         <div>
           <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-orange-500 md:text-4xl">
             Faça uma consulta online
           </h2>
-          <div className="bg-custom-form flex flex-col gap-4 rounded-lg px-2 py-6">
+          <div className="flex flex-col gap-4 rounded-lg bg-custom-form px-2 py-6">
             <p className="font-semibold text-custom-blue-900">
               Os atendimentos são ao vivo, ou seja, as sessões entre paciente e
               psicanalista acontecem em tempo real, usando um programa que
@@ -175,7 +175,7 @@ export function HomeContent() {
         >
           Consulta sob sigilo
         </h2>
-        <div className="bg-custom-form flex flex-col gap-4 rounded-lg px-2 py-6">
+        <div className="flex flex-col gap-4 rounded-lg bg-custom-form px-2 py-6">
           <p
             ref={text4}
             className="translate-x-full font-semibold text-custom-blue-900 opacity-0 md:text-xl"
@@ -191,7 +191,7 @@ export function HomeContent() {
         </div>
       </section>
 
-      <section className="bg-parallax4 flex min-h-[500px] flex-col items-start justify-between bg-custom-menu bg-cover bg-fixed px-4 py-6 md:px-16 lg:min-h-screen">
+      <section className="flex min-h-[500px] flex-col items-start justify-between bg-custom-menu bg-parallax4 bg-cover bg-fixed px-4 py-6 md:px-16 lg:min-h-screen">
         <div className="flex flex-col rounded-sm">
           <h2
             ref={text5}
@@ -202,7 +202,7 @@ export function HomeContent() {
           <h3 className="mb-4 text-center font-semibold text-white md:text-xl">
             Me enviei uma mensagem e entrarei em contato assim que possível.
           </h3>
-          <div className="bg-custom-form rounded-lg px-2 py-6">
+          <div className="rounded-lg bg-custom-form px-2 py-6">
             <p
               ref={text6}
               className="mb-4 translate-x-full font-semibold text-custom-blue-900 opacity-0 md:text-xl"
