@@ -31,7 +31,7 @@ export function SchedulingForm() {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting, errors },
+    formState: { errors },
   } = useForm<ScheduleFormSchema>({
     resolver: zodResolver(scheduleFormSchema),
   })
@@ -49,7 +49,7 @@ export function SchedulingForm() {
   return (
     <form
       onSubmit={handleSubmit(handleSchedule)}
-      className="place-center bg-custom-form relative mx-6 grid min-w-[80vw] gap-4 rounded-md px-10 py-6 shadow-lg md:gap-6"
+      className="place-center relative mx-6 grid min-w-[80vw] gap-4 rounded-md bg-custom-form px-10 py-6 shadow-lg md:gap-6"
     >
       <Link
         href={`/`}

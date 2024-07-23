@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Schedule() {
   return (
-    <div className="bg-schedule flex flex-col items-center bg-cover bg-fixed py-6">
+    <div className="flex flex-col items-center bg-schedule bg-cover bg-fixed py-6">
       <h1 className="mb-6 px-2 text-xl md:text-2xl">
         Deixe aqui suas informações para agendarmos uma sessão
       </h1>

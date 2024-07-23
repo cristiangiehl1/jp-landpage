@@ -5,8 +5,7 @@ import { X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLayoutEffect, useRef } from 'react'
-import { FaInstagram, FaTwitter } from 'react-icons/fa'
-import { FaLinkedin } from 'react-icons/fa6'
+import { FaInstagram } from 'react-icons/fa'
 
 import logo from '@/assets/logo.png'
 

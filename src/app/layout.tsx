@@ -1,35 +1,28 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import {
-  Lato,
-  Manrope,
-  Montserrat,
-  Nova_Mono,
-  Nunito_Sans,
-  Poppins,
-} from 'next/font/google'
+import { Lato, Manrope } from 'next/font/google'
 
-const mont = Montserrat({ subsets: ['latin'] })
+// const mont = Montserrat({ subsets: ['latin'] })
 const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-manrope',
 })
-const poppins = Poppins({
-  subsets: ['latin'],
-  variable: '--font-poppins',
-  weight: ['500'],
-})
-const nunito = Nunito_Sans({
-  subsets: ['latin'],
-  variable: '--font-nunito',
-  weight: ['500'],
-})
-const nova = Nova_Mono({
-  subsets: ['latin'],
-  variable: '--font-nunito',
-  weight: ['400'],
-})
+// const poppins = Poppins({
+//   subsets: ['latin'],
+//   variable: '--font-poppins',
+//   weight: ['500'],
+// })
+// const nunito = Nunito_Sans({
+//   subsets: ['latin'],
+//   variable: '--font-nunito',
+//   weight: ['500'],
+// })
+// const nova = Nova_Mono({
+//   subsets: ['latin'],
+//   variable: '--font-nunito',
+//   weight: ['400'],
+// })
 const lato = Lato({
   subsets: ['latin'],
   variable: '--font-nunito',
