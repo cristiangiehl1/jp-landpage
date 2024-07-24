@@ -74,7 +74,7 @@ const config = {
         'custom-content-bg': 'rgba(255, 255, 255, 0.8)',
       },
       fontFamily: {
-        manrope: 'var(--font-manrope)',
+        greatVibes: 'var(--font-greatVibes)',
       },
 
       borderRadius: {

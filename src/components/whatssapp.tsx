@@ -42,7 +42,7 @@ export function Whatsapp() {
       className="fixed bottom-2 right-2 z-20 w-[55px] overflow-hidden rounded-full bg-green-500 p-3 text-white shadow-lg"
     >
       <a
-        href="https://wa.me/552199815903?text=Bem-vindo!%20Clique%20no%20ícone%20para%20iniciar%20uma%20conversa%20comigo."
+        href="https://wa.me/5521999520216?text=Bem-vindo!%20Clique%20no%20ícone%20para%20iniciar%20uma%20conversa%20comigo."
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-2"

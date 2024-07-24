@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col overflow-x-hidden">
-      <div className="grid grid-cols-2 place-content-end bg-slate-200 px-2 pt-6 shadow-2xl sm:px-10">
+      <section className="grid grid-cols-2 place-content-end bg-slate-200 px-2 pt-10 sm:px-10">
         <div className="flex items-end">
           <Image
             src={jpPhoto}
@@ -25,9 +25,9 @@ export default function Home() {
           />
         </div>
 
-        <div className="mb-6 rounded-lg bg-custom-skin-500 p-2 shadow-2xl md:px-10">
+        <div className="mb-10 rounded-lg bg-custom-skin-500 p-2 shadow-lg md:mb-24 md:px-10">
           <div className="mb-4 py-4">
-            <h1 className="text-2xl font-bold tracking-widest text-custom-blue-900 md:text-3xl lg:text-5xl">
+            <h1 className="font-greatVibes text-2xl font-bold tracking-widest text-custom-blue-900 md:text-3xl lg:text-5xl">
               João Pedro Giehl
             </h1>
 
@@ -48,7 +48,7 @@ export default function Home() {
 
           <HomeIcons />
         </div>
-      </div>
+      </section>
 
       <HomeContent />
     </div>

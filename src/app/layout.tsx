@@ -1,31 +1,17 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { Lato, Manrope } from 'next/font/google'
+import { Great_Vibes, Lato } from 'next/font/google'
 
-// const mont = Montserrat({ subsets: ['latin'] })
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-manrope',
-})
-// const poppins = Poppins({
-//   subsets: ['latin'],
-//   variable: '--font-poppins',
-//   weight: ['500'],
-// })
-// const nunito = Nunito_Sans({
-//   subsets: ['latin'],
-//   variable: '--font-nunito',
-//   weight: ['500'],
-// })
-// const nova = Nova_Mono({
-//   subsets: ['latin'],
-//   variable: '--font-nunito',
-//   weight: ['400'],
-// })
 const lato = Lato({
   subsets: ['latin'],
-  variable: '--font-nunito',
+  variable: '--font-lato',
+  weight: ['400'],
+})
+
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  variable: '--font-greatVibes',
   weight: ['400'],
 })
 
@@ -43,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${lato.className} ${manrope.variable}`}>
+    <html lang="en" className={`${lato.className} ${greatVibes.variable}`}>
       <body className="text-white">{children}</body>
     </html>
   )
