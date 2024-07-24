@@ -81,7 +81,7 @@ export function ContactForm() {
   return (
     <div>
       {emailSentResponse && emailSentResponse.success && (
-        <div className="bg-custom-content-bg absolute left-1/2 top-1/2 flex w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-2 rounded-3xl p-6 font-bold text-custom-blue-900">
+        <div className="absolute left-1/2 top-1/2 flex w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-2 rounded-3xl bg-custom-content-bg p-6 font-bold text-custom-blue-900">
           <h1 className="text-xl">Sua mensagem foi enviada com sucesso!</h1>
           <p>Agradeço o seu contato, retornarei assim que possível.</p>
           <p>
@@ -135,7 +135,7 @@ export function ContactForm() {
       {emailSentResponse && !emailSentResponse.success && (
         <form
           onSubmit={handleSubmit(handleSchedule)}
-          className="place-center bg-custom-form relative mx-6 grid min-w-[80vw] gap-4 rounded-md px-10 py-6 shadow-lg md:gap-6"
+          className="place-center relative mx-6 grid min-w-[80vw] gap-4 rounded-md bg-custom-form px-10 py-6 shadow-lg md:gap-6"
         >
           <h1 className="mb-6 px-2 text-center text-xl font-bold text-custom-blue-900 md:text-2xl">
             Deixe aqui suas informações para agendarmos uma sessão

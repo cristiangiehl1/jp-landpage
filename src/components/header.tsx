@@ -46,7 +46,7 @@ export function Header() {
             alt=""
             className="h-8 w-8 rounded-full bg-white p-0.5"
           />
-          <span className="font-greatVibes font-bolder tracking-widest text-custom-skin-500">
+          <span className="font-bolder font-greatVibes tracking-widest text-custom-skin-500">
             João Pedro Giehl
           </span>
         </div>

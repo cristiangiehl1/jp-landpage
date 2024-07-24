@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 
-import jpPhoto from '@/assets/jp-photo-2.png'
+import jpPhoto from '@/assets/jp-photo.png'
 
 import { HomeContent } from './home-content'
 import { HomeIcons } from './home-icons'
