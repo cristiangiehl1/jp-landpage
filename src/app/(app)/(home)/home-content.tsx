@@ -217,8 +217,8 @@ export function HomeContent() {
         </div>
       </section>
 
-      <section className="gsap__box3 flex max-w-[800px] translate-x-full flex-col items-center p-6 opacity-0 md:flex-row lg:mx-auto">
-        <FaLock size={100} className="text-custom-blue-900" />
+      <section className="gsap__box3 flex max-w-[800px] translate-x-full flex-col items-center p-6 opacity-0 lg:mx-auto">
+        <FaLock size={50} className="text-custom-blue-900" />
         <div className="m-10 rounded-3xl bg-custom-skin-500 p-10 shadow-md md:p-16">
           <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 md:text-4xl">
             Consulta sob sigilo
@@ -236,7 +236,7 @@ export function HomeContent() {
             </p>
           </div>
         </div>
-        <FaLock size={100} className="text-custom-blue-900" />
+        <FaLock size={50} className="text-custom-blue-900" />
       </section>
 
       <section className="flex min-h-[500px] flex-col items-start gap-6 bg-custom-menu bg-schedule bg-cover bg-fixed px-10 py-6 md:px-16 lg:min-h-screen">
