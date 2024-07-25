@@ -1,15 +1,16 @@
 'use client'
 
 import gsap from 'gsap'
-import { X } from 'lucide-react'
+import { Loader2, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { FaInstagram } from 'react-icons/fa'
 
 import logo from '@/assets/logo.png'
 
 export function Header() {
+  const [isLoadingFile, setIsloadingFile] = useState(false)
   const menuContainer = useRef<HTMLDivElement | null>(null)
   const tl = useRef<gsap.core.Timeline | null>(null)
 
@@ -35,6 +36,33 @@ export function Header() {
 
   function closeMenu() {
     tl.current?.reverse()
+  }
+
+  async function handleDownloadFile() {
+    const fileUrl = '/documents/manual-consulta-online.pdf'
+
+    setIsloadingFile(true)
+
+    try {
+      const response = await fetch(fileUrl)
+
+      if (!response.ok) {
+        throw new Error('Erro ao buscar o arquivo.')
+      }
+
+      const link = document.createElement('a')
+      link.href = fileUrl
+      link.download = 'manual-consulta-online.pdf'
+      document.body.appendChild(link)
+
+      link.click()
+
+      document.body.removeChild(link)
+    } catch (error) {
+      console.error('Falha ao baixar o arquivo:', error)
+    } finally {
+      setIsloadingFile(false)
+    }
   }
 
   return (
@@ -85,15 +113,25 @@ export function Header() {
           </li>
 
           <li>
-            <a
-              href="/documents/manual-consulta-online.pdf"
-              onClick={() => {}}
-              download
-              className="text-3xl font-bold leading-none tracking-tighter transition-colors duration-300 hover:text-custom-orange-500 md:text-5xl"
-            >
-              Processo Terapêutico{' '}
-              <span className="text-xs md:text-base">02</span>
-            </a>
+            {isLoadingFile ? (
+              <div className="flex flex-col items-start justify-center gap-2">
+                <h2 className="text-left text-2xl font-bold leading-none tracking-tighter text-custom-orange-500 md:text-4xl">
+                  Aguarde o download do arquivo
+                </h2>
+                <Loader2
+                  size={25}
+                  className="animate-spin text-custom-orange-500 repeat-infinite"
+                />
+              </div>
+            ) : (
+              <button
+                onClick={() => handleDownloadFile()}
+                className="text-left text-3xl font-bold leading-none tracking-tighter transition-colors duration-300 hover:text-custom-orange-500 md:text-5xl"
+              >
+                Processo Terapêutico{' '}
+                <span className="text-xs md:text-base">02</span>
+              </button>
+            )}
           </li>
 
           <li>

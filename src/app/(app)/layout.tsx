@@ -8,6 +8,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
   return (
     <div className="grid min-h-screen grid-rows-[max-content_1fr_max-content] bg-slate-200">
       <Header />
+
       {children}
 
       <Whatsapp />
