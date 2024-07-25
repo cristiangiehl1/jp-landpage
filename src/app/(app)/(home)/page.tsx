@@ -24,7 +24,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="mb-10 rounded-lg bg-custom-skin-500 p-4 shadow-lg md:mb-24 md:px-10">
+        <div className="mb-10 rounded-lg bg-custom-skin-500 p-4 shadow-lg md:mb-24 md:px-10 md:py-10">
           <div className="mb-4">
             <h1 className="font-greatVibes text-2xl font-bold tracking-widest text-custom-blue-900 md:text-3xl lg:text-5xl">
               João Pedro Giehl
