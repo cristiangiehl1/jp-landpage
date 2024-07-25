@@ -23,7 +23,7 @@ const scheduleFormSchema = z.object({
   }),
   date: z
     .string()
-    .min(1, { message: 'Informe o melhor dia e horário para contato.' }),
+    .min(1, { message: 'Informe o melhor horário para entrar em contato.' }),
   description: z.string().nullable(),
 })
 
@@ -71,6 +71,7 @@ export function ContactForm() {
       reset()
     } else {
       setEmailSentResponse(result)
+      console.error(result.errros)
     }
   }
 
@@ -81,7 +82,7 @@ export function ContactForm() {
   return (
     <div>
       {emailSentResponse && emailSentResponse.success && (
-        <div className="absolute left-1/2 top-1/2 flex w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-2 rounded-3xl bg-custom-content-bg p-6 font-bold text-custom-blue-900">
+        <div className="absolute left-1/2 top-1/2 flex w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-2 rounded-3xl bg-custom-content-bg px-8 py-10 font-bold text-custom-blue-900">
           <h1 className="text-xl">Sua mensagem foi enviada com sucesso!</h1>
           <p>Agradeço o seu contato, retornarei assim que possível.</p>
           <p>
@@ -135,14 +136,14 @@ export function ContactForm() {
       {emailSentResponse && !emailSentResponse.success && (
         <form
           onSubmit={handleSubmit(handleSchedule)}
-          className="place-center relative mx-6 grid min-w-[80vw] gap-4 rounded-md bg-custom-form px-10 py-6 shadow-lg md:gap-6"
+          className="place-center relative mx-6 grid min-w-[80vw] gap-4 rounded-md bg-custom-form px-10 pb-6 pt-12 shadow-lg md:gap-6"
         >
-          <h1 className="mb-6 px-2 text-center text-xl font-bold text-custom-blue-900 md:text-2xl">
+          <h1 className="mb-2 px-2 text-center text-xl font-bold text-custom-blue-900 md:text-2xl">
             Deixe aqui suas informações para agendarmos uma sessão
           </h1>
           <Link
             href={`/`}
-            className="absolute right-4 top-24 flex items-center text-xs font-bold text-custom-blue-900 transition-colors duration-300 hover:text-custom-orange-500 md:text-sm"
+            className="absolute left-4 top-4 flex items-center text-xs font-bold text-custom-blue-900 transition-colors duration-300 hover:text-custom-orange-500 md:text-sm"
           >
             <ArrowLeft />
             Voltar
@@ -187,7 +188,7 @@ export function ContactForm() {
                 className="font-semibold text-custom-blue-900 md:text-lg"
                 htmlFor="date"
               >
-                Melhor dia e hora para retornar
+                Melhor horário para retornar
               </Label>
               <Input
                 id="date"

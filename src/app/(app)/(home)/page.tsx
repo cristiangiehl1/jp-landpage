@@ -21,12 +21,11 @@ export default function Home() {
             width={500}
             alt="Dr. João Pedro com blusa social branca."
             quality={80}
-            className=""
           />
         </div>
 
-        <div className="mb-10 rounded-lg bg-custom-skin-500 p-2 shadow-lg md:mb-24 md:px-10">
-          <div className="mb-4 py-4">
+        <div className="mb-10 rounded-lg bg-custom-skin-500 p-4 shadow-lg md:mb-24 md:px-10">
+          <div className="mb-4">
             <h1 className="font-greatVibes text-2xl font-bold tracking-widest text-custom-blue-900 md:text-3xl lg:text-5xl">
               João Pedro Giehl
             </h1>
@@ -36,7 +35,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mb-10">
+          <div className="mb-6">
             <h2 className="mb-2 text-base font-semibold leading-none tracking-wide text-custom-orange-500 md:text-2xl lg:text-4xl">
               Transformando vidas e promovendo bem estar através da psicoterapia
             </h2>

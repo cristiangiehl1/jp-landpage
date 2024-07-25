@@ -87,6 +87,7 @@ export function Header() {
           <li>
             <a
               href="/documents/manual-consulta-online.pdf"
+              onClick={() => {}}
               download
               className="text-3xl font-bold leading-none tracking-tighter transition-colors duration-300 hover:text-custom-orange-500 md:text-5xl"
             >

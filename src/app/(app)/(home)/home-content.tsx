@@ -135,7 +135,7 @@ export function HomeContent() {
         </div>
       </section>
 
-      <section className="gsap__box1 mx-10 my-10 max-w-[800px] -translate-x-full rounded-full bg-custom-skin-500 p-20 opacity-0 shadow-md md:px-16 lg:mx-auto">
+      <section className="gsap__box1 mx-10 my-10 max-w-[800px] -translate-x-full rounded-full bg-custom-skin-500 px-10 py-16 opacity-0 shadow-md md:p-16 lg:mx-auto">
         <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 drop-shadow-sm md:text-4xl">
           Supervisão clínica individual
         </h2>
@@ -219,7 +219,7 @@ export function HomeContent() {
 
       <section className="gsap__box3 flex max-w-[800px] translate-x-full flex-col items-center p-6 opacity-0 lg:mx-auto">
         <FaLock size={50} className="text-custom-blue-900" />
-        <div className="m-10 rounded-3xl bg-custom-skin-500 p-10 shadow-md md:p-16">
+        <div className="m-10 rounded-3xl bg-custom-skin-500 p-5 shadow-md md:p-16">
           <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 md:text-4xl">
             Consulta sob sigilo
           </h2>
@@ -262,7 +262,7 @@ export function HomeContent() {
         </div>
 
         <Link
-          href={'/schedule'}
+          href={'/contact'}
           className="gsap__text3 translate-x-full whitespace-nowrap rounded-full bg-custom-blue-900 p-3 opacity-0 transition-colors duration-500 hover:bg-custom-orange-500"
         >
           Entre em contato
