@@ -31,22 +31,6 @@ export function HomeContent() {
         ease: 'power2.inOut',
       })
 
-      const box1 = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.gsap__box1',
-          start: 'top bottom',
-          end: 'center center',
-          scrub: 1,
-        },
-      })
-
-      box1.to('.gsap__box1', {
-        x: 0,
-        opacity: 1,
-        duration: 2,
-        ease: 'power2.inOut',
-      })
-
       const box2 = gsap.timeline({
         scrollTrigger: {
           trigger: '.gsap__box2',
@@ -118,24 +102,32 @@ export function HomeContent() {
     <main ref={container} className="grid grid-rows-[repeat(6_min-content)]">
       <section className="flex min-h-[500px] flex-col gap-6 bg-parallax1 bg-cover bg-fixed px-10 py-6 md:px-16 lg:min-h-screen">
         <h2 className="gsap__text1 -translate-x-full text-3xl font-bold leading-tight tracking-tighter text-custom-orange-500 opacity-0 md:text-4xl">
-          Psicoterapia
+          Serviços
         </h2>
-        <div className="overflow-hidden rounded-lg bg-custom-content-bg">
-          <p className="gsap__text1 translate-x-full p-6 font-semibold text-custom-blue-900 opacity-0 md:text-xl">
+        <div className="flex flex-col gap-2 overflow-hidden rounded-lg bg-custom-content-bg p-6">
+          <h3 className="gsap__text1 translate-x-full font-semibold text-custom-orange-500 opacity-0 md:text-xl">
+            Psicoterapia online (Análise)
+          </h3>
+          <p className="gsap__text1 translate-x-full font-semibold text-custom-blue-900 opacity-0 md:text-xl">
             Fico feliz em saber que você tem interesse em iniciar esse processo
             de “olhar para si” comigo, será um prazer iniciar nossas sessões.
           </p>
         </div>
 
-        <div className="overflow-hidden rounded-lg bg-custom-content-bg">
-          <p className="gsap__text1 -translate-x-full p-6 font-semibold text-custom-blue-900 opacity-0 md:text-xl">
-            Fico feliz em saber que você tem interesse em iniciar esse processo
-            de “olhar para si” comigo, será um prazer iniciar nossas sessões.
+        <div className="flex flex-col gap-2 overflow-hidden rounded-lg bg-custom-content-bg p-6">
+          <h3 className="gsap__text1 -translate-x-full font-semibold text-custom-orange-500 opacity-0 md:text-xl">
+            Supervisão Clínica Individual (Online)
+          </h3>
+          <p className="gsap__text1 -translate-x-full font-semibold text-custom-blue-900 opacity-0 md:text-xl">
+            A supervisão tem por objetivo auxiliar analistas com casos que
+            estejam apresentando dificuldade com o manejo transferencial. Sendo
+            um dos pilares essências para qualquer analista segundo o tripé
+            analítico proposto por Freud.
           </p>
         </div>
       </section>
 
-      <section className="gsap__box1 mx-10 my-10 max-w-[800px] -translate-x-full rounded-full bg-custom-skin-500 px-10 py-16 opacity-0 shadow-md md:p-16 lg:mx-auto">
+      {/* <section className="gsap__box1 mx-10 my-10 max-w-[800px] -translate-x-full rounded-full bg-custom-skin-500 px-10 py-16 opacity-0 shadow-md md:p-16 lg:mx-auto">
         <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 drop-shadow-sm md:text-4xl">
           Supervisão clínica individual
         </h2>
@@ -145,6 +137,28 @@ export function HomeContent() {
           pilares essências para qualquer analista segundo o tripé analítico
           proposto por Freud.
         </p>
+      </section> */}
+
+      <section className="gsap__box3 flex max-w-[800px] translate-x-full flex-col items-center p-6 opacity-0 lg:mx-auto">
+        <FaLock size={50} className="text-custom-blue-900" />
+        <div className="m-10 rounded-3xl bg-custom-skin-500 p-5 shadow-md md:p-16">
+          <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 md:text-4xl">
+            Consulta sob sigilo
+          </h2>
+          <div className="flex flex-col gap-4 rounded-lg p-2">
+            <p className="text-custom-blue-900 md:text-xl">
+              O trabalho é desenvolvido em um contexto totalmente confidencial,
+              garantindo ao paciente pleno sigilo.
+            </p>
+            <p className="text-custom-blue-900 md:text-xl">
+              A psicoterapia online é um procedimento validado pelo CFP
+              (Conselho Federal de Psicologia) desde 2018. Essa modalidade de
+              tratamento é uma realidade cada vez mais presente no nosso dia a
+              dia.
+            </p>
+          </div>
+        </div>
+        <FaLock size={50} className="text-custom-blue-900" />
       </section>
 
       <section className="flex min-h-[500px] gap-6 bg-slate-200 bg-parallax2 bg-cover bg-top bg-no-repeat p-10 md:px-16 lg:min-h-screen lg:bg-parallax22">
@@ -175,7 +189,7 @@ export function HomeContent() {
 
           <div className="gsap__box2 translate-x-full opacity-0">
             <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 md:text-4xl">
-              Minha formação
+              Atuação
             </h2>
             <ul className="list-inside list-disc rounded-lg bg-custom-content-bg p-6">
               <li className="text-left leading-relaxed text-custom-blue-900 md:text-xl">
@@ -186,7 +200,7 @@ export function HomeContent() {
                 (SEMAV).
               </li>
               <li className="text-left leading-relaxed text-custom-blue-900 md:text-xl">
-                Psicoterapia de abordagem analítica – On-line.
+                Graduado em psicologia - IBMR.
               </li>
             </ul>
           </div>
@@ -207,36 +221,14 @@ export function HomeContent() {
               tenham privacidade e acesso a recursos audiovisuais via Internet.
             </p>
             <p className="gsap__text2 translate-x-full font-semibold text-custom-blue-900 opacity-0 md:text-xl">
-              Usamos aplicativos como WhatsApp ou plataformas de video-chamada.
+              Usamos aplicativos como Google Meets ou Zoom.
             </p>
             <p className="gsap__text2 -translate-x-full font-semibold text-custom-blue-900 opacity-0 md:text-xl">
               Ofereço psicoterapia individual, com encontros semanais
-              previamente agendados, cada sessão dura de 45 a 50 minutos
+              previamente agendados, cada sessão dura em torno de 40 minutos.
             </p>
           </div>
         </div>
-      </section>
-
-      <section className="gsap__box3 flex max-w-[800px] translate-x-full flex-col items-center p-6 opacity-0 lg:mx-auto">
-        <FaLock size={50} className="text-custom-blue-900" />
-        <div className="m-10 rounded-3xl bg-custom-skin-500 p-5 shadow-md md:p-16">
-          <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tighter text-custom-blue-900 md:text-4xl">
-            Consulta sob sigilo
-          </h2>
-          <div className="flex flex-col gap-4 rounded-lg p-2">
-            <p className="text-custom-blue-900 md:text-xl">
-              O trabalho é desenvolvido em um contexto totalmente confidencial,
-              garantindo ao paciente pleno sigilo.
-            </p>
-            <p className="text-custom-blue-900 md:text-xl">
-              A psicoterapia online é um procedimento validado pelo CFP
-              (Conselho Federal de Psicologia) desde 2018. Essa modalidade de
-              tratamento é uma realidade cada vez mais presente no nosso dia a
-              dia.
-            </p>
-          </div>
-        </div>
-        <FaLock size={50} className="text-custom-blue-900" />
       </section>
 
       <section className="flex min-h-[500px] flex-col items-start gap-6 bg-custom-menu bg-schedule bg-cover bg-fixed px-10 py-6 md:px-16 lg:min-h-screen">
@@ -253,10 +245,6 @@ export function HomeContent() {
             <p className="gsap__text3 mb-4 translate-x-full font-semibold text-custom-blue-900 opacity-0 md:text-xl">
               No primeiro contato é feito uma entrevista inicial para esclarecer
               dúvidas e saber mais detalhes sobre a consulta online.
-            </p>
-
-            <p className="gsap__text3 -translate-x-full font-bold text-custom-blue-900 opacity-0 md:text-xl">
-              Totalmente gratuíto.
             </p>
           </div>
         </div>

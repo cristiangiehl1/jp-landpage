@@ -74,6 +74,7 @@ const config = {
       },
       fontFamily: {
         greatVibes: 'var(--font-greatVibes)',
+        poppins: 'var(--font-poppins)',
       },
 
       borderRadius: {

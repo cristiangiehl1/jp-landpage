@@ -10,7 +10,7 @@ import { FaInstagram } from 'react-icons/fa'
 import logo from '@/assets/logo.png'
 
 export function Header() {
-  const [isLoadingFile, setIsloadingFile] = useState(false)
+  const [isLoadingFile, setIsLoadingFile] = useState(false)
   const menuContainer = useRef<HTMLDivElement | null>(null)
   const tl = useRef<gsap.core.Timeline | null>(null)
 
@@ -41,7 +41,7 @@ export function Header() {
   async function handleDownloadFile() {
     const fileUrl = '/documents/manual-consulta-online.pdf'
 
-    setIsloadingFile(true)
+    setIsLoadingFile(true)
 
     try {
       const response = await fetch(fileUrl)
@@ -55,13 +55,17 @@ export function Header() {
       link.download = 'manual-consulta-online.pdf'
       document.body.appendChild(link)
 
-      link.click()
+      link.addEventListener('click', () => {
+        setTimeout(() => {
+          document.body.removeChild(link)
+          setIsLoadingFile(false)
+        }, 100)
+      })
 
-      document.body.removeChild(link)
+      link.click()
     } catch (error) {
       console.error('Falha ao baixar o arquivo:', error)
-    } finally {
-      setIsloadingFile(false)
+      setIsLoadingFile(false)
     }
   }
 
@@ -74,7 +78,7 @@ export function Header() {
             alt=""
             className="h-8 w-8 rounded-full bg-white p-0.5"
           />
-          <span className="font-bolder font-greatVibes tracking-widest text-custom-skin-500">
+          <span className="font-bolder font-poppins tracking-widest text-custom-skin-500">
             João Pedro Giehl
           </span>
         </div>
@@ -114,7 +118,7 @@ export function Header() {
 
           <li>
             {isLoadingFile ? (
-              <div className="flex flex-col items-start justify-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <h2 className="text-left text-2xl font-bold leading-none tracking-tighter text-custom-orange-500 md:text-4xl">
                   Aguarde o download do arquivo
                 </h2>

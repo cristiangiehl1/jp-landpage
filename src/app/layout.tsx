@@ -2,7 +2,7 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
-import { Great_Vibes, Lato } from 'next/font/google'
+import { Lato, Poppins } from 'next/font/google'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -10,9 +10,9 @@ const lato = Lato({
   weight: ['400'],
 })
 
-const greatVibes = Great_Vibes({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-greatVibes',
+  variable: '--font-poppins',
   weight: ['400'],
 })
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${lato.className} ${greatVibes.variable}`}>
+    <html lang="en" className={`${lato.className} ${poppins.variable}`}>
       <body className="text-white">{children}</body>
     </html>
   )
